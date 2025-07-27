@@ -2,15 +2,16 @@ import productModel from "../models/product.model.js";
 
 productModel
 
-export const getProducts = async (req,res) =>{
-    try {
-       const products = await productModel.find().sort({createdAt : -1}) || [];
-       res.status(200).json({success:true,data : products})
-    } catch (error) {
-        console.log("Error fetching product data", data.message)
-        res.status(500).json({success:false,message: "something went wrong"})
-    }
-}
+export const getProducts = async (req, res) => {
+  try {
+    const products = await productModel.find().sort({ createdAt: -1 }) || [];
+    res.status(200).json({ success: true, data: products });
+  } catch (error) {
+    console.log("Error fetching product data", error.message); 
+    res.status(500).json({ success: false, message: "Something went wrong" });
+  }
+};
+
 
 // GET /api/products/:id
 export const getProductbyId = async (req, res) => {
