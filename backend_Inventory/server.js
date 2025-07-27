@@ -10,7 +10,7 @@ const app = express()
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://frontend-inventory-git-master-sou2218s-projects.vercel.app'
+  'https://inventory-management-do53.vercel.app/'
 ];
 
 const corsOptions = {
