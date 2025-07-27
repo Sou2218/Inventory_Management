@@ -8,10 +8,24 @@ dotenv.config();
 const app = express()
 
 
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://frontend-inventory-git-master-sou2218s-projects.vercel.app'
+];
+
 const corsOptions = {
-  origin: 'https://frontend-inventory-git-master-sou2218s-projects.vercel.app',
+  origin: function (origin, callback) {
+    // Allow requests with no origin (e.g., curl, Postman)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('❌ Not allowed by CORS'));
+    }
+  },
   optionsSuccessStatus: 200,
 };
+
 
 app.use(cors(corsOptions));
 const PORT = process.env.PORT || 4000
