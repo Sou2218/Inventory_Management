@@ -28,3 +28,4 @@ frontend_Inventory/node_modules
 backend_Inventory/node_modules
 .frontend_Inventory/.env
 .backend_Inventory/.env
+.vercel
