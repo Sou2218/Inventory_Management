@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 const ProductList = () => {
   const [products, setProducts] = useState([]);
 
-const REACT_BACKEND_URL = process.env.REACT_BACKEND_URL
+const API_URL = process.env.REACT_BACKEND_URL
 
   const fetchData = async () => {
     try {
-      const res = await axios.get(`${REACT_BACKEND_URL}/api/products`);
+      const res = await axios.get(`${API_URL}/api/products`);
       setProducts(res.data.data || []);
     } catch (error) {
       console.error("Error fetching products:", error.message);
@@ -21,7 +21,7 @@ const REACT_BACKEND_URL = process.env.REACT_BACKEND_URL
   const deleteProduct = async (id) => {
     if (!window.confirm("Are you sure you want to delete this product?")) return;
     try {
-      await axios.delete(`${REACT_BACKEND_URL}/api/products/${id}`);
+      await axios.delete(`${API_URL}/api/products/${id}`);
       fetchData();
     } catch (err) {
       console.error("Error deleting product:", err.message);
