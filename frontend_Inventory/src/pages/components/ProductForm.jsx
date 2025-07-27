@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 const ProductForm = () => {
 
-  const REACT_BACKEND_URL = "http://localhost:5000"
+  // const REACT_BACKEND_URL = "http://localhost:5000"
 
   const [product, setProduct] = useState({ name: '', price: '', category: '', stock: '' });
   const [errors, setErrors] = useState({});

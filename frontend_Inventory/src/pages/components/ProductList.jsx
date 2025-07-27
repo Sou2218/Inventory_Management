@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const ProductList = () => {
   const [products, setProducts] = useState([]);
 
-const REACT_BACKEND_URL = "http://localhost:5000"
+// const REACT_BACKEND_URL = "http://localhost:5000"
 
   const fetchData = async () => {
     try {
