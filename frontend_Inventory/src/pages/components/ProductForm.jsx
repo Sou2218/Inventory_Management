@@ -5,7 +5,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 const ProductForm = () => {
 
- const API_URL = process.env.REACT_BACKEND_URL
+const API_URL = import.meta.env.VITE_BACKEND_URL;
+
 
   const [product, setProduct] = useState({ name: '', price: '', category: '', stock: '' });
   const [errors, setErrors] = useState({});

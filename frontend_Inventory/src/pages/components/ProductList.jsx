@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const ProductList = () => {
   const [products, setProducts] = useState([]);
 
-const API_URL = process.env.REACT_BACKEND_URL
+const API_URL = import.meta.env.VITE_BACKEND_URL;
 
   const fetchData = async () => {
     try {
