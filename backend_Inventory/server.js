@@ -10,7 +10,8 @@ const app = express()
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://inventory-management-do53.vercel.app'
+  'https://inventory-management-do53.vercel.app',
+  'https://inventory-management-flame-gamma.vercel.app'
 ];
 
 const corsOptions = {
