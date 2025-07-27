@@ -7,14 +7,8 @@ import { connectDB } from './config/db.js';
 dotenv.config();
 const app = express();
 
-const corsConfig = {
-  origin: ["https://inventory-management-do53.vercel.app"], 
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE"]
-};
+app.use(cors());
 
-app.use(cors(corsConfig));
-app.options("", cors(corsConfig)); 
 
 app.use(express.json());
 app.use('/api/products', productRoutes);
