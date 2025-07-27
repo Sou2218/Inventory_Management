@@ -2,15 +2,6 @@
 
 A full-stack MERN (MongoDB, Express, React, Node.js) application that allows users to manage a list of products. Users can add, view, edit, and delete products with form validations on both the frontend and backend.
 
----
-
-## 🚀 Live Demo
-
-🔗 Frontend: frontend-inventory-git-master-sou2218s-projects.vercel.app
-🔗 Backend: backend-inventory-git-master-sou2218s-projects.vercel.app
-
----
-
 
 
 ## 📦 Features
