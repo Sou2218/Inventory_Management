@@ -4,13 +4,14 @@ productModel
 
 export const getProducts = async (req, res) => {
   try {
-    const products = await productModel.find().sort({ createdAt: -1 }) || [];
+    const products = await productModel.find().sort({ createdAt: -1 });
     res.status(200).json({ success: true, data: products });
   } catch (error) {
-    console.log("Error fetching product data", error.message); 
+    console.log("Error fetching product data", error.message);
     res.status(500).json({ success: false, message: "Something went wrong" });
   }
 };
+
 
 
 // GET /api/products/:id
