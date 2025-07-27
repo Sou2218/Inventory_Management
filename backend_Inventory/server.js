@@ -9,10 +9,12 @@ const app = express()
 
 
 const allowedOrigins = [
-  'http://localhost:5173',
-  'https://inventory-management-do53.vercel.app',
-  'https://inventory-management-flame-gamma.vercel.app'
+  'http://localhost:5173', 
+  'https://inventory-management-do53.vercel.app', 
+  'https://inventory-management-do53-git-main-sou2218s-projects.vercel.app', 
+  'https://inventory-management-git-main-sou2218s-projects.vercel.app' 
 ];
+
 
 const corsOptions = {
   origin: function (origin, callback) {
