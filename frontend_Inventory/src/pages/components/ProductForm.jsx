@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 
+
 const ProductForm = () => {
 
-  // const REACT_BACKEND_URL = "http://localhost:5000"
+ const REACT_BACKEND_URL = process.env.REACT_BACKEND_URL
 
   const [product, setProduct] = useState({ name: '', price: '', category: '', stock: '' });
   const [errors, setErrors] = useState({});
